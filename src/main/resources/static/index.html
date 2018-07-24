@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Spring Boot File Upload / Download Rest API Example</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+<noscript>
+    <h2>Sorry! Your browser doesn't support Javascript</h2>
+</noscript>
+<div class="upload-container">
+    <div class="upload-header">
+        <h2>Spring Boot File Upload / Download Rest API Example</h2>
+        <h3>Upload files to:</h3>
+    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'filesys')" id="defaultOpen">FileSystem</button>
+        <button class="tablinks" onclick="openTab(event, 'database')">Database</button>
+    </div>
+
+    <!-- Upload to FileSystem -->
+    <div id="filesys" class="tabcontent">
+        <div class="single-upload">
+            <h3>Upload Single File</h3>
+            <form id="singleUploadForm-fs" name="singleUploadForm-fs">
+                <input id="singleFileUploadInput-fs" type="file" name="file" class="file-input" required />
+                <button type="submit" class="primary submit-btn">Submit</button>
+            </form>
+            <div class="upload-response">
+                <div id="singleFileUploadError-fs"></div>
+                <div id="singleFileUploadSuccess-fs"></div>
+            </div>
+        </div>
+        <div class="multiple-upload">
+            <h3>Upload Multiple Files</h3>
+            <form id="multipleUploadForm-fs" name="multipleUploadForm-fs">
+                <input id="multipleFileUploadInput-fs" type="file" name="files" class="file-input" multiple required />
+                <button type="submit" class="primary submit-btn">Submit</button>
+            </form>
+            <div class="upload-response">
+                <div id="multipleFileUploadError-fs"></div>
+                <div id="multipleFileUploadSuccess-fs"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Upload to DataBase -->
+    <div id="database" class="tabcontent">
+        <div class="single-upload">
+            <h3>Upload Single File</h3>
+            <form id="singleUploadForm-db" name="singleUploadForm-db">
+                <input id="singleFileUploadInput-db" type="file" name="file" class="file-input" required />
+                <button type="submit" class="primary submit-btn">Submit</button>
+            </form>
+            <div class="upload-response">
+                <div id="singleFileUploadError-db"></div>
+                <div id="singleFileUploadSuccess-db"></div>
+            </div>
+        </div>
+        <div class="multiple-upload">
+            <h3>Upload Multiple Files</h3>
+            <form id="multipleUploadForm-db" name="multipleUploadForm-db">
+                <input id="multipleFileUploadInput-db" type="file" name="files" class="file-input" multiple required />
+                <button type="submit" class="primary submit-btn">Submit</button>
+            </form>
+            <div class="upload-response">
+                <div id="multipleFileUploadError-db"></div>
+                <div id="multipleFileUploadSuccess-db"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/main.js" ></script>
+</body>
+</html>
